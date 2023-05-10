@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Notas</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="overlay"></div>
+    <header>
+        <img class="escola-foto" src="images/school_icon.png" alt="Imagem de uma escola">
+        <h1>REGISTRO DE NOTAS ESCOLARES</h1>
+    </header>
+    <main>
+        <aside>
+            <div class="add">
+                <img class="add-icone" src="images/add-user_icon.png" alt="Icone de adicionar aluno">
+
+                <h2 class="titulo-aside">Registrar novo aluno</h2>
+            </div>
+            <form class="form-cadastro">
+                <label for="form-nome">Nome do aluno</label>
+                <input id="form-nome" name="nomeForm" type="text">
+                <label for="form-1trimestre">Nota do 1° Trimestre</label>
+                <input id="form-1trimestre" name="trimestre1Form" type="number">
+                <label for="form-2trimestre">Nota do 2° Trimestre</label>
+                <input id="form-2trimestre" name="trimestre2Form" type="number">
+                <label for="form-3trimestre">Nota do 3° Trimestre</label>
+                <input id="form-3trimestre" name="trimestre3Form" type="number">
+                <div>
+                    <input id="form-prova-check" type="checkbox">
+                    <label for="form-prova-check">Fez prova final?</label>
+                </div>
+                <label for="form-nota-prova">Nota da Prova Final</label>
+                <input id="form-nota-prova" name="notaProvaForm" type="number" disabled>
+                <button class="botao-cadastro">Cadastrar Notas</button>
+                <button class="cria-aluno">Gerar aluno</button>
+                <ul class="mensagens-erro">
+
+                </ul>
+            </form>
+        </aside>
+        <section>
+            <h2 class="titulo-section">ALUNOS CADASTRADOS</h2>
+                <input class="pesquisa-aluno" name="pesquisaAluno" type="search" placeholder="Pesquise por um(a) aluno(a)...">
+                <p class="aviso-exclusao">Para excluir um aluno, clique duas vezes sobre o mesmo.</p>
+                <table class="tabela">
+                <thead class="titulo-tabela">
+                    <td>Nome</td>
+                    <td>1° Trimestre</td>
+                    <td>2° Trimestre</td>
+                    <td>3° Trimestre</td>
+                    <td>Prova Final</td>
+                    <td>Nota final</td>
+                    <td>Situação</td>
+                </thead>
+                <tbody class="corpo-tabela">
+                    <tr class="aluno">
+                        <td class="nome">Aluno Teste</td>
+                        <td class="trimestre1">7.5</td>
+                        <td class="trimestre2">6.5</td>
+                        <td class="trimestre3">8.0</td>
+                        <td class="prova-final">NaN</td>
+                        <td class="nota-final"></td>
+                        <td class="situacao">APROVADO</td>
+                    </tr>
+                </tbody>
+            </table>
+            <section class="calculo">
+                <h2 class="calculo-titulo">Cálculo de Notas</h2>
+                <p>Nota final (sem prova final):</p> 
+                    <p class="nota-calculo">Média entre as notas dos três trimestres = Nota Final</p>
+                <p>Nota final (com prova final):</p> 
+                    <p class="nota-calculo">Média entre as notas dos três trimestres <span class="multiplicacao">x0.7</span> + Nota da Prova Final <span class="multiplicacao">x0.3</span> = Nota Final</p> 
+            </section>
+            <div class="aba-aluno invisivel">
+                <h1 class="exclusao-titulo">Excluir aluno</h1>
+                <p class="exclusao-texto">Deseja excluir o cadastro de<p class="aluno-nome"></p> ?</p>
+                <div class="flex">
+                    <button class="concluir-exclusao">Excluir</button>
+                    <button class="cancelar-exclusao">Cancelar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+        <script src="main.js"></script>
+        <script src="form.js"></script>
+        <script src="remove.js"></script>
+        <script src="filtro.js"></script>
+        <script src="cria-alunos.js"></script>
+</body>
+</html>

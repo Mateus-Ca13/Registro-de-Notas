@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
+
+body {
+    font-family:'Rubik', sans-serif;
+}
+
+header {
+    background: linear-gradient(190deg, #c281ff, #0db1ce);
+    padding: 1em 3em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.escola-foto {
+    width: 40px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+/* ASIDE DE CADASTRO ----------------------------------------------------------- */
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 2em;
+    background: #e4f1fc;
+    height: 100%;
+    box-shadow: 0 0 5px 3px #ccc;
+}
+
+.add-icone {
+    width: 25px;
+    padding-right: 1em;
+}
+
+.add {
+    display: flex;
+    align-items: center;
+    
+}
+
+form {
+    margin: 1em 0;
+}
+
+input {
+    display: block;
+    margin: 0.3em 0 1.5em;
+    border: 1px solid #ccc;
+    padding: 2px 5px;
+    font-family: 'Rubik', sans-serif;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+#form-prova-check {
+    display: inline-block;
+}
+
+.botao-cadastro {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-family: 'Rubik', sans-serif;
+    display: block;
+    width: 15vw;
+}
+
+.cria-aluno {
+    margin: 1em 0;
+    padding: 10px;
+    color: white;
+    background-color: #8341a1;
+    border: 1px solid #000000;
+    font-family: 'Rubik', sans-serif;
+    width: 15vw;
+}
+
+.mensagens-erro {
+   color: rgb(207, 16, 58);
+   padding: 1em 0 0 0;
+   font-size: 11px;
+}
+
+.lista-erro {
+    padding: 5px 0;
+}
+
+/* SECTION DE REGISTRO ----------------------------------------------------------- */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 2em;
+    text-align: center;
+}
+
+.pesquisa-aluno {
+    width: 50%;
+    margin: 1em 0 0 0;
+    padding: 0.2em 0.5em;
+}
+
+table {
+    margin: 1em;
+}
+
+.titulo-tabela {
+    color: #fff;
+    background: #38006db9
+}
+
+.corpo-tabela {
+    cursor: pointer;
+}
+
+td {
+    text-align: center;
+    padding: 0.5em 1em ;
+    border: 1px solid #000;
+}
+
+.td_invalido {
+    background: rgb(199, 51, 51);
+    color: white;
+}
+
+.calculo {
+    margin-top: 6em;
+    gap: 1em;
+    background: #bbbbbbb9;
+    border-radius: 10px;
+}
+
+.calculo-titulo {
+    font-size: 20px;
+    color: #820786;
+    
+}
+
+.nota-calculo {
+    font-size: 14px;
+    background: #e4f1fc;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.multiplicacao {
+    color: #515bb6;
+    padding: 0 2px;
+}
+
+.exclusao-tabela {
+    opacity: 0;
+    font-size: 1px;
+    transition: 0.3s;
+}
+
+.filtro-tabela, .invisivel {
+    display: none;
+}
+
+/* ABA DE EXCLUSAO -------------------------------------------------------------- */
+
+.aviso-exclusao {
+    margin: 1em 0 0 0 ;
+    font-size: 14px;
+    color: red;
+}
+
+.aba-aluno {
+    position: fixed;
+    z-index: 3;
+    padding: 1em 2em 2em 2em;
+    background: rgb(255, 255, 255);
+    border: 2px solid #8341a1;
+    border-radius: 15px;
+}
+
+.exclusao-titulo {
+    color: red;
+    font-size: 20px;
+}
+
+.aluno-nome {
+    color:grey;
+    display: inline-block;
+}
+
+.flex {
+    display: flex;
+    gap: 1em;
+    margin: 1em 0 0 0;
+    justify-content: center;
+}
+
+.concluir-exclusao {
+
+    padding: 10px;
+    color: white;
+    background-color: #8341a1;
+    border: 1px solid #000000;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+.cancelar-exclusao {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+.selecionado {
+    transition: 0.2s;
+    background: #ddd;
+    color: #5e0f5f;
+}
+
+.area-esmaecida {
+    position: fixed;
+    transition: 0.3s;
+    background: rgba(200, 200, 200, 0.5);
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    
+}
+
